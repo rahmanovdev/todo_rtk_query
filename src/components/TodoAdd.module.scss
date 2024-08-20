@@ -21,23 +21,13 @@
     gap: 1rem;
     width: 100%;
 
-    input {
-      padding: 0.8rem;
-      border: 1px solid #ddd;
-      border: none;
-      outline: none !important;
-    }
-
-    input::placeholder {
-        color: #898686;
-    }
-
+    input[type="text"],
     input[type="file"] {
       padding: 0.8rem;
       border: 1px solid #ddd;
       border-radius: 8px;
       font-size: 1rem;
-      color: #dfcbcb;
+      color: #333;
       transition: border-color 0.3s ease;
 
       &:focus {
@@ -60,6 +50,54 @@
       &:hover {
         background-color: #0056b3;
         box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+    max-width: 400px;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    form {
+      gap: 0.8rem;
+
+      input[type="text"],
+      input[type="file"] {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+      }
+
+      button {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.2rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 1rem;
+    max-width: 90%;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    form {
+      gap: 0.6rem;
+
+      input[type="text"],
+      input[type="file"] {
+        font-size: 0.85rem;
+        padding: 0.6rem;
+      }
+
+      button {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
       }
     }
   }
