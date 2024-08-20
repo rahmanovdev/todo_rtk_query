@@ -21,7 +21,19 @@
     gap: 1rem;
     width: 100%;
 
-    input[type="text"],
+    input {
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1rem;
+      color: #333;
+
+      &::placeholder {
+        color: #898686;
+      }
+    }
+
     input[type="file"] {
       padding: 0.8rem;
       border: 1px solid #ddd;
@@ -32,7 +44,6 @@
 
       &:focus {
         border-color: #007bff;
-        outline: none;
         box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
       }
     }
@@ -56,31 +67,30 @@
 
   @media (max-width: 768px) {
     padding: 1.5rem;
-    max-width: 400px;
+    max-width: 90%;
 
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.75rem;
     }
 
     form {
       gap: 0.8rem;
 
-      input[type="text"],
-      input[type="file"] {
-        font-size: 0.9rem;
+      input {
         padding: 0.7rem;
+        font-size: 0.9rem;
       }
 
       button {
-        font-size: 0.9rem;
         padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
       }
     }
   }
 
   @media (max-width: 480px) {
     padding: 1rem;
-    max-width: 90%;
+    max-width: 100%;
 
     h1 {
       font-size: 1.5rem;
@@ -89,15 +99,14 @@
     form {
       gap: 0.6rem;
 
-      input[type="text"],
-      input[type="file"] {
-        font-size: 0.85rem;
+      input {
         padding: 0.6rem;
+        font-size: 0.85rem;
       }
 
       button {
-        font-size: 0.85rem;
         padding: 0.6rem 1rem;
+        font-size: 0.85rem;
       }
     }
   }
